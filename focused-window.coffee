@@ -1,21 +1,21 @@
-command: "echo $(/usr/local/bin/kwmc query space active tag)"
+command: """echo 'tell application "System Events"
+        set frontApp to first application process whose frontmost is true
+        set frontAppName to name of frontApp
+		end tell
+		return {frontAppName}' | osascript
+"""
 
 refreshFrequency: 1000 # ms
 
 render: (output) ->
   """
-  <link rel="stylesheet" href="nerdbar.widget/assets/font-awesome/css/font-awesome.min.css" />
   <div class="foc"
     <span></span>
-    <span class="icon"></span>
   </div>
   """
 
 update: (output, el) ->
     $(".foc span:first-child", el).text("  #{output}")
-    $icon = $(".foc span.icon", el)
-    $icon.removeClass().addClass("icon")
-    $icon.addClass("fa fa-bars")
 
 style: """
   -webkit-font-smoothing: antialiased
