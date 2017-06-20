@@ -6,8 +6,8 @@ render: (output) ->
 style: """
   top: 0
   left: 0
-  height: 25px
+  height: 22px
   width: 100%
-  background-color: #202020
+  -webkit-backdrop-filter: blur(20px) brightness(60%)
   z-index: -1
 """

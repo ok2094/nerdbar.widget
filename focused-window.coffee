@@ -9,7 +9,7 @@ refreshFrequency: 1000 # ms
 
 render: (output) ->
   """
-  <div class="foc"
+  <div class="foc">
     <span></span>
   </div>
   """
@@ -18,14 +18,12 @@ update: (output, el) ->
     $(".foc span:first-child", el).text("  #{output}")
 
 style: """
-  -webkit-font-smoothing: antialiased
-  color: #c0c0c0
-  font: 12px Input
+  color: #f4f4f4
+  font: 11px Envy Code R
   height: 16px
-  left: 10px
+  left: 15px
   overflow: hidden
   white-space: nowrap
   text-overflow: ellipsis
-  top: 6px
-  width: 498px
+  top: 4px
 """

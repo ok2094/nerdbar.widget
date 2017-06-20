@@ -12,39 +12,44 @@ command: """echo 'tell application "Spotify"
     end tell' | osascript
 """
 
-refreshFrequency: 5000 # ms
+refreshFrequency: 3000 # ms
 
 render: (output) ->
   """
   <link rel="stylesheet" href="nerdbar.widget/assets/font-awesome/css/font-awesome.min.css" />
-  <div class="np"
-    <span></span>
+  <div class="np">
     <span class="icon"></span>
+    <span class="text"></span>
   </div>
   """
 
 update: (output, el) ->
     info = output.split(", ");
-    $(".np span:first-child", el).text("  #{info[1] + " - " + info[2]}")
+    $(".np span.text", el).text("  #{info[1] + " - " + info[2]}")
     $icon = $(".np span.icon", el)
     $icon.removeClass().addClass("icon")
     $icon.addClass("fa #{@icon(info[0])}")
 
 icon: (status) =>
     return if status.substring(0, 6) == "paused"
-        "fa-pause-circle-o"
+        "fa-pause"
     else
-        "fa-play-circle-o"
+        "fa-play"
 
 style: """
-  -webkit-font-smoothing: antialiased
   text-align: center
-  color: #c0c0c0
-  font: 12px Input
+  color: #f4f4f4
+  font: 11px Input
   height: 16px
   left: 25%
   overflow: hidden
   text-overflow: ellipsis
-  top: 6px
+  top: 4px
   width: 50%
+
+  .np span.icon
+    margin-right: 4px
+
+  .np span.text
+    font: 11px Envy Code R
 """

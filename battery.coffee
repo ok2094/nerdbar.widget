@@ -5,15 +5,15 @@ refreshFrequency: 15000 # ms
 render: (output) ->
   """
   <link rel="stylesheet" href="nerdbar.widget/assets/font-awesome/css/font-awesome.min.css" />
-  <div class="battery"
-    <span></span>
+  <div class="battery">
     <span class="icon"></span>
+    <span class="text"></span>
   </div>
   """
 
 update: (output, el) ->
     bat = parseInt(output)
-    $(".battery span:first-child", el).text("  #{output}")
+    $(".battery span.text", el).text("  #{output}")
     $icon = $(".battery span.icon", el)
     $icon.removeClass().addClass("icon")
     $icon.addClass("fa #{@icon(bat)}")
@@ -31,10 +31,14 @@ icon: (output) =>
     "fa-battery-empty"
 
 style: """
-  -webkit-font-smoothing: antialiased
   font: 12px Input
-  top: 6px
-  right: 220px
-  width: 50px
-  color: #c0c0c0
+  top: 3px
+  right: 65px
+  color: #f4f4f4
+
+  .battery span.icon
+    margin-right: 3px
+
+  .battery span.text
+    font: 11px Envy Code R
 """

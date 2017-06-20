@@ -26,9 +26,8 @@ icon: (status) =>
         "fa-times"
 
 style: """
-  -webkit-font-smoothing: antialiased
-  color: #c0c0c0
-  font: 12px Input
-  right: 10px
-  top: 6px
+  color: #f4f4f4
+  font: 11px Input
+  right: 125px
+  top: 4px
 """
