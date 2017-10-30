@@ -4,7 +4,7 @@ Personal [Übersicht](http://tracesof.net/uebersicht/) system information bar fo
 Originally created by [herrbischoff](https://github.com/herrbischoff), modified by [koekeishiya](https://github.com/koekeishiya), forked by [sndels](https://github.com/sndels) and now forked by me.
 This fork is customized to my liking.
 
-![bar](https://my.mixtape.moe/qnsrxz.png)
+![bar](https://a.safe.moe/JpN7d.png)
 
 ## Installation
 
