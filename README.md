@@ -1,6 +1,6 @@
 # Bar
 
-Personal [Übersicht](http://tracesof.net/uebersicht/) system information bar for use with [Kwm](https://github.com/koekeishiya/kwm) window manager.
+Personal [Übersicht](http://tracesof.net/uebersicht/) system information bar.
 Originally created by [herrbischoff](https://github.com/herrbischoff), modified by [koekeishiya](https://github.com/koekeishiya), forked by [sndels](https://github.com/sndels) and now forked by me.
 This fork is customized to my liking.
 
